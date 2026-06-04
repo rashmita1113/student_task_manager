@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h2>Mark Attendance</h2>
+
+<form action="/save_attendance" method="POST">
+
+    <div class="row mt-4">
+
+        <div class="col-md-6">
+            <label class="form-label">Student ID</label>
+            <input
+                type="number"
+                name="student_id"
+                class="form-control"
+                required
+            >
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Attendance Status</label>
+            <select
+                name="attendance_status"
+                class="form-select"
+                required
+            >
+                <option value="">Select Status</option>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+    
+            </select>
+        </div>
+
+    </div>
+
+    <button
+        type="submit"
+        class="btn btn-primary mt-4"
+    >
+        Save Attendance
+    </button>
+
+</form>
+
+{% endblock %}
