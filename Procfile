@@ -1,1 +1,1 @@
-web: gunicorn student12_task_manager.app:app
+web: gunicorn student_task_manager:app
